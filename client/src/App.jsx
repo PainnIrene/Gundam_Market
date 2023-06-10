@@ -9,10 +9,15 @@ const App = () => {
 </header>
 <main className=" w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]">
    <Routes>
+   
     <Route path="/" element={<Home/>} />
    </Routes>
    <Routes>
+   <Link to="/admin">
    <Route path="admin" element={<Dashboard/>} />
+
+
+   </Link>
 
    </Routes>
 </main>

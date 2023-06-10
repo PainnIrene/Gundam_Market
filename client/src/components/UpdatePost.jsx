@@ -60,7 +60,7 @@ const UpdatePost = ({post}) => {
 
         await response.json();
         alert('Update Successful');
-        window.location.reload();
+      //  window.location.reload();
       } catch (err) {
         alert(err);
       } finally {

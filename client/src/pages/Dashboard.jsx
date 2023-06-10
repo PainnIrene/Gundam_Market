@@ -55,7 +55,7 @@ function Dashboard() {
               const result = await response.json();
         alert('Delete Successful');
 
-             window.location.reload();
+             //window.location.reload();
              
   
             }
