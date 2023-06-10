@@ -10,7 +10,7 @@ const App = () => {
 <main className=" w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]">
    <Routes>
     <Route path="/" element={<Home/>} />
-    <Route path="/admin" element={<Dashboard/>} />
+    <Route path="admin" element={<Dashboard/>} />
 
    </Routes>
 </main>
