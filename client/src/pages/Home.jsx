@@ -12,7 +12,7 @@ function Home() {
 
   const fetchPosts = async () => {
     try {
-          const response = await fetch('https://mern-gundam-market-git-master-painhoangtran-gmailcom.vercel.app/post/posts', {
+          const response = await fetch('https://gundam-market-be-painhoangtran-gmailcom.vercel.app/post/posts', {
   
           method: 'GET',
           headers: {

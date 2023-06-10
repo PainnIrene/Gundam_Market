@@ -49,7 +49,7 @@ const UpdatePost = ({post}) => {
 
       try {
        
-         const response = await fetch(`https://mern-gundam-market-git-master-painhoangtran-gmailcom.vercel.app/post/update/${post._id}`, {
+         const response = await fetch(`https://gundam-market-be-painhoangtran-gmailcom.vercel.app/post/update/${post._id}`, {
        //  const response = await fetch('https://mern-gundam-market-git-master-painhoangtran-gmailcom.vercel.app/post/upload', {
           method: 'PATCH',
           headers: {
