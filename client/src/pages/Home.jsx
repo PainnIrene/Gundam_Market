@@ -2,7 +2,7 @@ import React,{ useEffect, useState }  from 'react'
 import gundamImg from '../assets/gundam.jpg'
 import logo from '../assets/logo.png'
 import { CreatePost } from '../components'
-
+import { Link } from 'react-router-dom'
 function Home() {
   const [posts, setPosts] = useState([]);
 
@@ -107,12 +107,15 @@ const handleCreatePostClick = () => {
           </a>
         </li>
         <li>
+        <Link to="/admin">
+
           <a
             href="/admin"
             className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
           >
-            Services
+            Admin
           </a>
+</Link>
         </li>
         <li>
           <a
