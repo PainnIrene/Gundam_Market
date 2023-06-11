@@ -11,14 +11,7 @@ const App = () => {
    <Routes>
    
     <Route path="/" element={<Home/>} />
-   </Routes>
-   <Routes>
-   <Link to="/admin">
    <Route path="admin" element={<Dashboard/>} />
-
-
-   </Link>
-
    </Routes>
 </main>
 
