@@ -5,6 +5,8 @@ const UpdatePost = ({post}) => {
   const [isFormVisible, setIsFormVisible] = useState(true);
   const handleHideForm = () => {
     setIsFormVisible(false);
+    //update
+    window.location.reload();
   };
 
   const [form, setForm] = useState({
@@ -50,7 +52,8 @@ const UpdatePost = ({post}) => {
       try {
        
          const response = await fetch(`https://gundam-market-be-painhoangtran-gmailcom.vercel.app/post/update/${post._id}`, {
-       //  const response = await fetch('https://mern-gundam-market-git-master-painhoangtran-gmailcom.vercel.app/post/upload', {
+       //  const response = await fetch(`http://localhost:5000/post/update/${post._id}`, {
+
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
@@ -60,7 +63,7 @@ const UpdatePost = ({post}) => {
 
         await response.json();
         alert('Update Successful');
-      //  window.location.reload();
+        window.location.reload();
       } catch (err) {
         alert(err);
       } finally {

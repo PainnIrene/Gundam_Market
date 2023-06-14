@@ -34,7 +34,7 @@ router.route('/upload').post(async(req,res)=>{
 router.route('/posts').get(async(req,res)=>{
   try {
       const posts=await Post.find({});
-      res.status(200).json({success:true,data:posts})
+      res.status(200).json({success:true,data:posts.reverse()})
 
   } catch (error) {
       res.status(500).json({success:false,message:error})
@@ -46,12 +46,11 @@ router.route('/posts').get(async(req,res)=>{
 router.route('/update/:id').patch(async(req,res)=>{
 
 try{
-  
-  if (req.body.photo) {
 //delete image in cloudinary
 const _id = req.params.id;
 const findPost = await Post.findById(_id);
 const imageUrl = findPost.photo;
+if(req.body.photo!==imageUrl){
 // Extract the public ID from the image URL
 const publicId =  extractPublicId(imageUrl);
 
@@ -60,7 +59,9 @@ await cloudinary.uploader.destroy(publicId);
 
     //update
     const photoUrl = await cloudinary.uploader.upload(req.body.photo);
-     req.body.photo = photoUrl.url;}
+     req.body.photo = photoUrl.url;
+    }
+    
 
     await Post.findByIdAndUpdate(req.params.id, req.body,{new:true});
 

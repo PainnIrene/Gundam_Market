@@ -5,8 +5,11 @@ const CreatePost = () => {
   const navigate = useNavigate();
   const [previewImage, setPreviewImage] = useState(null);
   const [isFormVisible, setIsFormVisible] = useState(true);
+
   const handleHideForm = () => {
     setIsFormVisible(false);
+    //update
+    window.location.reload();
   };
 
   const [form, setForm] = useState({

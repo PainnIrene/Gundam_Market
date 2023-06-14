@@ -149,7 +149,7 @@ const handleCreatePostClick = () => {
 
      {/*Card*/}
     
-      <div className="flex flex-wrap bg-slate-600 justify-normal" >
+      <div className="flex flex-wrap bg-slate-600 justify-center" >
        
   
       {posts.map((post) => (
