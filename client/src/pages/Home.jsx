@@ -22,7 +22,7 @@ function Home() {
   
         if (response.ok) {
           const result = await response.json();
-          setPosts(result.data.reverse());
+          setPosts(result.data);
         }
       } catch (err) {
         alert(err);
