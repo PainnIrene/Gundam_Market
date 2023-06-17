@@ -20,7 +20,7 @@ function Dashboard() {
    
     const fetchPosts = async () => {
       try {
-            const response = await fetch('https://gundam-market-be-painhoangtran-gmailcom.vercel.app/post/posts', {
+            const response = await fetch('https://gundam-market-git-master-painhoangtran-gmailcom.vercel.app/post/posts', {
            // const response = await fetch('http://localhost:5000/post/posts', {
     
             method: 'GET',
@@ -44,7 +44,7 @@ function Dashboard() {
       const handleDeletePost = async (id) => {
         try {
            // const response = await fetch(`http://localhost:5000/post/delete/${id}`, {
-            const response = await fetch(`https://gundam-market-be-painhoangtran-gmailcom.vercel.app/post/delete/${id}`, {
+            const response = await fetch(`https://gundam-market-git-master-painhoangtran-gmailcom.vercel.app/post/delete/${id}`, {
       
               method: 'DELETE',
               headers: {

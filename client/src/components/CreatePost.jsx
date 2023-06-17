@@ -43,7 +43,7 @@ const CreatePost = () => {
       try {
        
        //  const response = await fetch('http://localhost:5000/post/upload', {
-         const response = await fetch('https://gundam-market-be-painhoangtran-gmailcom.vercel.app/post/upload', {
+         const response = await fetch('https://gundam-market-git-master-painhoangtran-gmailcom.vercel.app/post/upload', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

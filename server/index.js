@@ -29,7 +29,6 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-
 app.get('/',async(req,res)=>{
     res.send("Welcome backEnd");
     
