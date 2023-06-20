@@ -51,8 +51,8 @@ const UpdatePost = ({post}) => {
 
       try {
        
-         const response = await fetch(`https://gundam-market-git-master-painhoangtran-gmailcom.vercel.app/post/update/${post._id}`, {
-       //  const response = await fetch(`http://localhost:5000/post/update/${post._id}`, {
+         const response = await fetch(`https://gundam-market-be.vercel.app/post/update/${post._id}`, {
+       //  const response = await fetch(`http:///post/update/${post._id}`, {
 
           method: 'PATCH',
           headers: {
