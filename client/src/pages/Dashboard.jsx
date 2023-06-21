@@ -44,7 +44,7 @@ function Dashboard() {
       const handleDeletePost = async (id) => {
         try {
            // const response = await fetch(`http:///post/delete/${id}`, {
-            const response = await fetch(`gundam-market-be.vercel.app/post/delete/${id}`, {
+            const response = await fetch(`https://gundam-market-be.vercel.app/post/delete/${id}`, {
       
               method: 'DELETE',
               headers: {
